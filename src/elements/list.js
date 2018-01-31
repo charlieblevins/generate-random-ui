@@ -9,12 +9,12 @@ class List extends Component {
 
     items() {
 
-        const num = _.random(1, 10);
+        const num = _.random(2, 15);
         const items = [];
 
         for (var i = 0; i < num; i++) {
             items.push(
-                React.createElement('li', null, 'item')
+                React.createElement('li', {key: i}, 'item')
             );
         }
 
@@ -22,13 +22,11 @@ class List extends Component {
     }
 
     render() {
-
         return React.createElement(
             this.tag(),
-            [],
+            null,
             this.items()
         );
-
     }
 }
 
